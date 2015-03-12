@@ -26,4 +26,8 @@ for line in data:
         name = strip_tags(line)
         name = name.strip('\t')
         names.append(name)
-print names
+names = names[1:] #taking out attendence office
+for name in names:
+    if ',' in name:
+        l = name.split(',')
+        print l[1][1]+l[0]+"@bhusd.org"
